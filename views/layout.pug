@@ -2,26 +2,23 @@ doctype html
 html
   head
     title= title
-    link(rel='preconnect' href='https://fonts.gstatic.com')
-    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
-    link(rel='stylesheet' href='/css/styles.css' type='text/css')
-    block head
+    link(rel='preconnect', href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='/css/styles.css')
+
   body
-    .container
-      header
-        nav
+    header
+      nav
+        .nav-left
           ul
-            li
-              a(href='/') Home
+            li: a(href='/') Home
             li |
-            li
-              a(href='#') Blog
-            li |
-            li
-              a(href='/register') Register
-      
-      main
-        block content
-      
-      footer
-        | &copy; Copyright 2021
+            li: a(href='#') Blog
+        .nav-right
+          ul
+            li: a(href='/register') Register
+
+    block content
+
+    footer
+      | © Copyright 2021

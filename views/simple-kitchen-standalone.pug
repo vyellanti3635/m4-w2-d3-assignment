@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    link(rel='preconnect', href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='css/styles.css', type='text/css')
+    script(src='script.js')
+  
+  body
+    header
+      nav
+        ul
+          li: a(href='/') Home
+          li |
+          li: a(href='#') Blog
+    
+    main
+      section#intro-text
+        span Simple Kitchen
+        h3 Simple & Comforting 
+          br
+          | Recipes All Year Round
+        p Pan-seared chicken, Grill shrimp, mac & cheese—need we say more?
+        button.submit-buttton View Recipes
+      
+      section#intro-image
+        img(src='images/louisiana-barbecued-shrimp.webp', alt='Louisiana Barbecued Shrimp')
+    
+    footer
+      | © Copyright 2022

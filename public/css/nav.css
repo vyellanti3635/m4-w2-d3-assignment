@@ -1,0 +1,29 @@
+/* Navigation Styles */
+nav {
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+nav .nav-left ul, nav .nav-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+nav .nav-left ul li, nav .nav-right ul li {
+  margin: 0 5px 0 0;
+  color: rgb(255, 255, 255);
+}
+nav .nav-left ul li a, nav .nav-right ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+nav .nav-left ul li a:hover, nav .nav-right ul li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=nav.css.map */

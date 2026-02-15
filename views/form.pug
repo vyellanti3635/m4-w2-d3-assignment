@@ -11,6 +11,8 @@ block content
     section.registration-section
       h2 Register to subscribe
       
+      -data = data || {}
+      
       if errors
         .error-messages
           each error in errors
@@ -19,10 +21,18 @@ block content
       form(action="/register" method="POST")
         .form-group
           label(for="name") Name:
-          input(type="text" id="name" name="name" value=data ? data.name : '')
+          input(type="text" id="name" name="name" value=data.name || '')
         
         .form-group
           label(for="email") Email:
-          input(type="email" id="email" name="email" value=data ? data.email : '')
+          input(type="email" id="email" name="email" value=data.email || '')
+        
+        .form-group
+          label(for='username') Username:
+          input(type='text' id='username' name='username' required)
+        
+        .form-group
+          label(for='password') Password:
+          input(type='password' id='password' name='password' required)
         
         button.register-button(type="submit") Register

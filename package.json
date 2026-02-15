@@ -1,22 +1,30 @@
 {
-  "name": "m3-w3-d3-homework",
+  "name": "express-form",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "build-css": "sass scss/styles.scss css/styles.css",
-    "watch-css": "sass --watch scss/styles.scss css/styles.css",
-    "dev": "sass --watch scss/styles.scss css/styles.css",
-    "watch": "nodemon index.js"
+    "start": "node start.js",
+    "dev": "nodemon ./start.js",
+    "watch": "nodemon ./start.js",
+    "sass": "sass --watch public/scss:public/css",
+    "sass:build": "sass public/scss:public/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "pug": "^3.0.2",
-    "mongoose": "^7.0.0",
-    "express-validator": "^7.0.0",
-    "bcrypt": "^5.1.0"
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "http-auth": "^4.2.1",
+    "mongoose": "^8.15.1",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
-    "sass": "^1.69.0",
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.1.10",
+    "sass": "^1.77.0"
   }
 }

@@ -1,0 +1,74 @@
+.registration-section {
+  flex: 1;
+  background: rgb(255, 255, 255);
+  padding: 3em 4em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.registration-section h2 {
+  color: rgb(49, 49, 48);
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: normal;
+}
+.registration-section .form-group {
+  margin-bottom: 1.2em;
+}
+.registration-section .form-group label {
+  display: block;
+  margin-bottom: 0.3em;
+  color: rgb(49, 49, 48);
+  font-weight: normal;
+  font-size: 0.9em;
+}
+.registration-section .form-group input[type=text],
+.registration-section .form-group input[type=email],
+.registration-section .form-group input[type=password] {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  background: white;
+}
+.registration-section .form-group input[type=text]:focus,
+.registration-section .form-group input[type=email]:focus,
+.registration-section .form-group input[type=password]:focus {
+  outline: none;
+  border-color: rgb(218, 170, 14);
+}
+.registration-section .register-button {
+  background: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 0;
+  font-size: 0.9em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5em;
+  font-weight: normal;
+}
+.registration-section .register-button:hover {
+  background: rgb(170.0775862069, 132.6293103448, 10.9224137931);
+}
+.registration-section .error-messages {
+  margin-bottom: 1em;
+}
+.registration-section .error-messages .error {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+.registration-section .success-message {
+  text-align: center;
+  color: rgb(49, 49, 48);
+  font-size: 1.2em;
+  margin-top: 2em;
+}
+
+/*# sourceMappingURL=registration.css.map */

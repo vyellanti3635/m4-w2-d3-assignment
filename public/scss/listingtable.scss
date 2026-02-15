@@ -1,0 +1,47 @@
+@import "colors.scss";
+
+// Listing table styles for registrants
+.registrants-table {
+  width: 100%;
+  max-width: 1350px;
+  margin: 2em auto;
+  border-collapse: collapse;
+  background: $mainColor;
+
+  thead {
+    background: $color3;
+    
+    th {
+      color: $color4;
+      padding: 1em;
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 2px solid $backgroundColor1;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+
+      &:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      &:hover {
+        background: $sectionColor;
+      }
+
+      td {
+        padding: 1em;
+        color: $color3;
+      }
+    }
+  }
+}
+
+.registrants-container {
+  background: $backgroundColor1;
+  min-height: 100vh;
+  padding: 2em 0;
+}

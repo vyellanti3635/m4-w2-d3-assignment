@@ -1,0 +1,38 @@
+.registrants-table {
+  width: 100%;
+  max-width: 1350px;
+  margin: 2em auto;
+  border-collapse: collapse;
+  background: rgb(255, 255, 255);
+}
+.registrants-table thead {
+  background: rgb(49, 49, 48);
+}
+.registrants-table thead th {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(218, 170, 14);
+}
+.registrants-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+.registrants-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.registrants-table tbody tr:hover {
+  background: rgb(212, 213, 216);
+}
+.registrants-table tbody tr td {
+  padding: 1em;
+  color: rgb(49, 49, 48);
+}
+
+.registrants-container {
+  background: rgb(218, 170, 14);
+  min-height: 100vh;
+  padding: 2em 0;
+}
+
+/*# sourceMappingURL=listingtable.css.map */
