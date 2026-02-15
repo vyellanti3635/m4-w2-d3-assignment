@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .content-wrapper
+    section#intro-text
+      span Simple Kitchen
+      h3 Simple &amp; Comforting 
+        br
+        | Recipes All Year Round
+      p Pan-seared chicken, Grill shrimp, mac &amp; cheese—need we say more?
+    
+    section#register-form
+      h2 Register to subscribe
+      
+      if errors
+        .errors
+          each error in errors
+            p.error= error.msg
+      
+      form(method='POST' action='/register')
+        .form-group
+          label(for='name') Name:
+          input(type='text' id='name' name='name' required)
+        
+        .form-group
+          label(for='email') Email:
+          input(type='email' id='email' name='email' required)
+        
+        .form-group
+          label(for='username') Username:
+          input(type='text' id='username' name='username' required)
+        
+        .form-group
+          label(for='password') Password:
+          input(type='password' id='password' name='password' required)
+        
+        button.submit-button(type='submit') Register

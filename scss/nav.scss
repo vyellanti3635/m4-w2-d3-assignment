@@ -1,0 +1,36 @@
+/* Nest Nav */
+header {
+  background-color: $primary-yellow;
+  padding: 15px 30px;
+  
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      
+      li {
+        font-family: $primary-font;
+        font-size: 16px;
+        
+        a {
+          text-decoration: none;
+          color: $white;
+          font-weight: 500;
+          
+          &:hover {
+            color: $dark-gray;
+          }
+        }
+        
+        &:nth-child(2) {
+          color: rgba($white, 0.7);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

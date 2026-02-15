@@ -1,0 +1,306 @@
+/* Variables */
+@import 'colors';
+@import 'nav';
+
+// Mixin for button styling
+@mixin button-style($bg-color: $primary-yellow, $text-color: $white) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 15px 30px;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  line-height: 1.6;
+  color: $dark-gray;
+  background-color: $primary-yellow;
+  padding: 10px 10px 5px 10px;
+}
+
+// Container wrapper
+.container {
+  background-color: $white;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Nest Main */
+main {
+  padding: 20px;
+  
+  .content-wrapper {
+    background-color: $white;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #intro-text {
+    flex: 2;
+    background-color: $light-gray;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    span {
+      font-family: $accent-font;
+      font-size: 24px;
+      color: $dark-gray;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: $dark-gray;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 14px;
+      color: $dark-gray;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    
+    .submit-buttton {
+      @include button-style();
+      align-self: center;
+    }
+  }
+  
+  #intro-image {
+    flex: 4;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  
+  #register-form {
+    flex: 3;
+    background-color: $white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: $dark-gray;
+    }
+    
+    .errors {
+      margin-bottom: 20px;
+      
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+    }
+    
+    form {
+      .form-group {
+        margin-bottom: 20px;
+        
+        label {
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 8px;
+          color: $dark-gray;
+        }
+        
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+          font-family: $primary-font;
+          
+          &:focus {
+            outline: none;
+            border-color: $primary-yellow;
+          }
+        }
+      }
+      
+      .submit-button {
+        @include button-style();
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  #thank-you {
+    flex: 1;
+    background-color: $white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    span {
+      font-family: $accent-font;
+      font-size: 24px;
+      color: $dark-gray;
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: $dark-gray;
+    }
+    
+    p {
+      font-size: 16px;
+      color: $dark-gray;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      a {
+        @include button-style();
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+  }
+  
+  #registrants-list {
+    flex: 1;
+    background-color: $white;
+    padding: 40px;
+    
+    span {
+      font-family: $accent-font;
+      font-size: 24px;
+      color: $dark-gray;
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: $dark-gray;
+    }
+    
+    p {
+      font-size: 16px;
+      color: $dark-gray;
+      margin-bottom: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      table-layout: fixed;
+      
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      
+      th:nth-child(1), td:nth-child(1) { width: 10%; }
+      th:nth-child(2), td:nth-child(2) { width: 20%; }
+      th:nth-child(3), td:nth-child(3) { width: 12%; }
+      th:nth-child(4), td:nth-child(4) { 
+        width: 40%; 
+        font-family: monospace;
+        font-size: 11px;
+        word-break: break-all;
+      }
+      th:nth-child(5), td:nth-child(5) { width: 18%; }
+    }
+    
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      
+      a {
+        @include button-style();
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $primary-yellow;
+  text-align: left;
+  padding: 8px 30px;
+  font-family: $primary-font;
+  color: $black;
+  font-size: 14px;
+}

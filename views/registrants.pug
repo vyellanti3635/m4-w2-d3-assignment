@@ -1,0 +1,51 @@
+extends layout
+
+block head
+  style.
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+block content
+  .content-wrapper
+    section#registrants-list
+      span Simple Kitchen
+      h2 Registrants (Admin View)
+      
+      if registrations && registrations.length > 0
+        table
+          thead
+            tr
+              th Name
+              th Email
+              th Username
+              th Password (Hashed)
+              th Registered At
+          tbody
+            each registration in registrations
+              tr
+                td= registration.name
+                td= registration.email
+                td= registration.username
+                td= registration.password
+                td= registration.registeredAt.toLocaleDateString()
+      else
+        p No registrations yet.
+      
+      .button-group
+        a.submit-buttton(href='/register') Add New Registration
+        a.submit-buttton(href='/') Back to Home

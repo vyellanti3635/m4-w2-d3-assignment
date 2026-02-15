@@ -1,0 +1,346 @@
+/* Variables */
+/* Nest Nav */
+header {
+  background-color: rgb(218, 170, 14);
+  padding: 15px 30px;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header nav ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  color: rgb(49, 49, 48);
+}
+header nav ul li:nth-child(2) {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: rgb(49, 49, 48);
+  background-color: rgb(218, 170, 14);
+  padding: 10px 10px 5px 10px;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Nest Main */
+main {
+  padding: 20px;
+}
+main .content-wrapper {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+main #intro-text {
+  flex: 2;
+  background-color: rgb(212, 213, 216);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 24px;
+  color: rgb(49, 49, 48);
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main #intro-text h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: rgb(49, 49, 48);
+  text-align: center;
+}
+main #intro-text p {
+  font-size: 14px;
+  color: rgb(49, 49, 48);
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: center;
+}
+main #intro-text .submit-buttton {
+  background-color: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main #intro-text .submit-buttton:hover {
+  background-color: rgb(170.0775862069, 132.6293103448, 10.9224137931);
+  transform: translateY(-2px);
+}
+main #intro-text .submit-buttton {
+  align-self: center;
+}
+main #intro-image {
+  flex: 4;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+main #intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+main #register-form {
+  flex: 3;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main #register-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: rgb(49, 49, 48);
+}
+main #register-form .errors {
+  margin-bottom: 20px;
+}
+main #register-form .errors .error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+main #register-form form .form-group {
+  margin-bottom: 20px;
+}
+main #register-form form .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: rgb(49, 49, 48);
+}
+main #register-form form .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main #register-form form .form-group input:focus {
+  outline: none;
+  border-color: rgb(218, 170, 14);
+}
+main #register-form form .submit-button {
+  background-color: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main #register-form form .submit-button:hover {
+  background-color: rgb(170.0775862069, 132.6293103448, 10.9224137931);
+  transform: translateY(-2px);
+}
+main #register-form form .submit-button {
+  width: 100%;
+  margin-top: 10px;
+}
+main #thank-you {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #thank-you span {
+  font-family: "Sacramento", cursive;
+  font-size: 24px;
+  color: rgb(49, 49, 48);
+  display: block;
+  margin-bottom: 20px;
+}
+main #thank-you h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: rgb(49, 49, 48);
+}
+main #thank-you p {
+  font-size: 16px;
+  color: rgb(49, 49, 48);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+main #thank-you .button-group {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #thank-you .button-group a {
+  background-color: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main #thank-you .button-group a:hover {
+  background-color: rgb(170.0775862069, 132.6293103448, 10.9224137931);
+  transform: translateY(-2px);
+}
+main #thank-you .button-group a {
+  text-decoration: none;
+  display: inline-block;
+}
+main #registrants-list {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+}
+main #registrants-list span {
+  font-family: "Sacramento", cursive;
+  font-size: 24px;
+  color: rgb(49, 49, 48);
+  display: block;
+  margin-bottom: 20px;
+}
+main #registrants-list h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: rgb(49, 49, 48);
+}
+main #registrants-list p {
+  font-size: 16px;
+  color: rgb(49, 49, 48);
+  margin-bottom: 20px;
+}
+main #registrants-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  table-layout: fixed;
+}
+main #registrants-list table th, main #registrants-list table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+main #registrants-list table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+main #registrants-list table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+main #registrants-list table th:nth-child(1), main #registrants-list table td:nth-child(1) {
+  width: 10%;
+}
+main #registrants-list table th:nth-child(2), main #registrants-list table td:nth-child(2) {
+  width: 20%;
+}
+main #registrants-list table th:nth-child(3), main #registrants-list table td:nth-child(3) {
+  width: 12%;
+}
+main #registrants-list table th:nth-child(4), main #registrants-list table td:nth-child(4) {
+  width: 40%;
+  font-family: monospace;
+  font-size: 11px;
+  word-break: break-all;
+}
+main #registrants-list table th:nth-child(5), main #registrants-list table td:nth-child(5) {
+  width: 18%;
+}
+main #registrants-list .button-group {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+main #registrants-list .button-group a {
+  background-color: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main #registrants-list .button-group a:hover {
+  background-color: rgb(170.0775862069, 132.6293103448, 10.9224137931);
+  transform: translateY(-2px);
+}
+main #registrants-list .button-group a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+footer {
+  background-color: rgb(218, 170, 14);
+  text-align: left;
+  padding: 8px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=styles.css.map */
